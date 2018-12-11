@@ -31,6 +31,9 @@ Requires:       pesign
 %endif
 BuildRequires:  openssl
 Url:            http://en.opensuse.org/openSUSE:UEFI_Image_File_Sign_Tools
+# OBS tar_scm.service supports only "-" as separator between name and version.
+# We must use "_" here for Debian compatibility.
+# The service-created tarball must be renamed manually from %{name}.tar.xz
 Source:         %{name}_%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-build
 
